@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+      Android Design - Dialogs
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../fonts.googleapis.com/css@family=Roboto_3Aregular,medium,thin,italic,mediumitalic">
+    <link rel="stylesheet" href="../../assets/yui-3.3.0-reset-min.css">
+    <link rel="stylesheet" href="../../assets/design/default.css">
+    <script src="../../assets/jquery-1.6.2.min.js"></script>
+    <script>var SITE_ROOT = '../../design';</script>
+    <script src="../../assets/design/default.js"></script>
+  </head>
+  <body itemscope itemtype="http://schema.org/Article">
+
+    <div id="page-container">
+
+      <div id="page-header" itemscope itemtype="http://schema.org/WPHeader"><a href="../index.html">Android Design</a></div>
+
+      <div id="main-row">
+
+        <div id="nav-container" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+        
+<ul id="nav">
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="index.html">cOMENZANDO</a></div>
+    <ul>
+      <li><a href="creative-vision.html">Vision Creativa</a></li>
+      <li><a href="principles.html">Principios de Diseño</a></li>
+      <li><a href="ui-overview.html">UI Revisión</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="style/index.html">EStILOS</a></div>
+    <ul>
+      <li><a href="style/devices-displays.html">Dispositivos/Pantallas</a></li>
+      <li><a href="style/themes.html">Temas</a></li>
+      <li><a href="style/touch-feedback.html">Feedback Táctil</a></li>
+      <li><a href="style/metrics-grids.html">Medidas y Grillas</a></li>
+      <li><a href="style/typography.html">Tipografias</a></li>
+      <li><a href="style/color.html">Colores</a></li>
+      <li><a href="style/iconography.html">Iconografia</a></li>
+      <li><a href="style/writing.html">Estilos de Escritura</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="patterns/index.html">PATRONES</a></div>
+    <ul>
+      <li><a href="patterns/new-4-0.html">Novedades Android 4</a></li>
+      <li><a href="patterns/gestures.html">Gestos</a></li>
+      <li><a href="patterns/app-structure.html">Estructura de Aplicación</a></li>
+      <li><a href="patterns/navigation.html">Navegación</a></li>
+      <li><a href="patterns/actionbar.html">Action Bar</a></li>
+      <li><a href="patterns/multi-pane-layouts.html">Maquetación Multi-pantallas</a></li>
+      <li><a href="patterns/swipe-views.html">Vistas Deslizantes</a></li>
+      <li><a href="patterns/selection.html">Seleccion</a>es</li>
+      <li><a href="patterns/notifications.html">Notificaciones</a></li>
+      <li><a href="patterns/settings.html">Ajustes</a></li>
+      <li><a href="patterns/compatibility.html">Compatibilidad</a></li>
+      <li><a href="patterns/pure-android.html">Android Puro</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="building-blocks/index.html">CONSTRUYENDO BloQUEs</a></div>
+    <ul>
+      <li><a href="building-blocks/tabs.html">Tabs</a></li>
+      <li><a href="building-blocks/lists.html">Listas</a></li>
+      <li><a href="building-blocks/grid-lists.html">Lista</a>  Grilla</li>
+      <li><a href="building-blocks/scrolling.html">Desplazamiento</a></li>
+      <li><a href="building-blocks/spinners.html">Cuadros de Selección</a></li>
+      <li><a href="building-blocks/buttons.html">Botones</a></li>
+      <li><a href="building-blocks/text-fields.html">Campos de Texto</a></li>
+      <li> Barrra de Opciones</li>
+      <li><a href="building-blocks/progress.html">Progreso &amp; Actividad</a></li>
+      <li><a href="building-blocks/switches.html">Interruptores</a></li>
+      <li><a href="building-blocks/dialogs.html">Dialogos</a></li>
+      <li><a href="building-blocks/pickers.html">Selectores</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header empty"><a href="downloads/index.html">DESCARGAS</a></div>
+  </li>
+
+  <li>
+    <div id="back-dac-section"><a href="../index.html">DESARROLLADORES</a></div>
+  </li>
+</ul>
+
+
+        </div>
+
+        <div id="content">
+
+
+<div class="layout-content-row content-header ">
+  <div class="layout-content-col span-9">
+    <h2>Dialogos</h2>
+    
+  </div>
+  <div class="paging-links layout-content-col span-4" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <a href="#" class="prev-page-link">Previous</a>
+    <a href="#" class="next-page-link">Next</a>
+  </div>
+</div>
+
+
+<p><span id="result_box" lang="es">Los cuadros de diálogo solicitan al usuario las decisiones y la información adicional requerida por la aplicación para continuar con una tarea. Estas peticiones pueden ir desde simples decisiones Cancelar / Aceptar a los diseños más complejos, se pide al usuario ajustar la configuración o escribir texto.</span></p>
+
+<img src="../media/dialogs_main.png">
+
+<div class="with-callouts">
+
+<ol>
+<li>
+<h4><span id="result_box3" lang="es">Región de título opcional</span></h4>
+<p><span id="result_box2" lang="es">El título se introduce el contenido de su diálogo. Puede, por ejemplo, identificar el nombre de una configuración que el usuario está a punto de cambiar, o solicitar una decisión.</span></p>
+</li>
+<li>
+<h4>Área de Contenido</h4>
+<p><span id="result_box4" lang="es">El contenido de esta area varía mucho. Los cuadros de diálogo de configuración, pueden contener elementos la interfaz de usuario, tales como deslizadores, campos de texto, casillas de verificación o botones de radio que permiten al usuario cambiar la configuración de aplicaciones o del sistema. En otros casos, como las alertas, el contenido podrá componerse únicamente de texto que proporciona un contexto adicional para una decisión del usuario.</span></p>
+</li>
+<li>
+<h4>Botones de Acción</h4>
+<p><span id="result_box5" lang="es">Los botones de acción son típicamente Cancelar y / o Aceptar con OK indicando la acción preferida o más probable.  Como regla general, el rechazo de la acción de un diálogo está siempre a la izquierda, mientras que las acciones afirmativas están a la derecha.</span></p>
+</li>
+</ol>
+
+</div>
+
+<img src="../media/dialogs_examples.png">
+<div class="figure-caption">
+  Ejemplos de típicos cuadros de diálogo usados en Android.</div>
+
+<h2 id="alerts">Alertas</h2>
+
+<p><span id="result_box6" lang="es">Las alertas informa al usuario acerca de una situación que requiere su confirmación o acuse de recibo antes de continuar. Se diferencian levemente en su apariencia en basea a la gravedad y el impacto del mensaje transmitido.</span></p>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-8">
+
+    <img src="../media/dialogs_w_no_title.png">
+
+  </div>
+  <div class="layout-content-col span-5">
+
+<h4><span id="result_box9" lang="es">Alertas sin barras de título</span></h4>
+<p><span id="result_box8" lang="es">La mayoría de los avisos no necesita títulos. Por lo general, la decisión no tiene consecuencias graves y pueden resumirse sucintamente en una o dos frases. El área de contenido o bien debe hacer una pregunta (como en "Eliminar esta conversación?") O hacer una declaración clara cuya relación con los botones de acción es evidente.</span></p>
+
+  </div>
+</div>
+
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-8">
+
+    <img src="../media/dialogs_w_title.png">
+
+  </div>
+  <div class="layout-content-col span-5">
+
+<h4><span id="result_box11" lang="es">Las alertas con barras de título</span></h4>
+<p><span id="result_box10" lang="es">Utilice las alertas con las barras de título con moderación. Ellas sólo son adecuadas cuando una operación de alto riesgo implica la potencial pérdida de datos, conectividad, cargos adicionales, y así sucesivamente requiere una pregunta clara o una declaración (el título) y una explicación adicional (en el área de contenido).<br>
+    <br>
+Mantenga la pregunta o frase corta: por ejemplo, "¿Borrar de almacenamiento USB?" Evite disculpas. Un usuario debe ser capaz de saltar el contenido completo y aún así tener una idea clara de qué opciones están disponibles basadas en el título y el texto de los botones de acción.</span></p>
+</div>
+</div>
+
+
+<h2 id="popups">Pop-ups</h2>
+
+<p><span id="result_box7" lang="es">Los Pop-ups son una versión ligera de los cuadros de diálogo y requieren una sola selección por parte del usuario. Los Pop-ups no tienen botones para aceptar o cancelar la operación. En su lugar, haciendo una selección de continua el flujo de trabajo, y simplemente tocando fuera de la ventana emergente se descarta.</span></p>
+
+<img src="../media/dialogs_popups_example.png">
+
+
+<h2 id="toasts">Avisos</h2>
+
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-6">
+
+    <div class="vspace size-6"></div>
+
+<p><span id="result_box12" lang="es">Los Avisos proporcionan información sobre una operación en segundo plano en una pequeña ventana emergente. Por ejemplo, navegar fuera de un correo electrónico antes de enviarlo desencadena un Aviso "Borrador Guardado" para hacerle saber que usted puede continuar con la edición luego. Los Avisos desaparecen automáticamente después de un tiempo de espera.</span></p>
+
+  </div>
+  <div class="layout-content-col span-7">
+
+    <img src="../media/dialogs_toasts.png">
+
+  </div>
+</div>
+
+
+
+<div class="layout-content-row content-footer" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div class="paging-links layout-content-col span-9">&nbsp;</div>
+  <div class="paging-links layout-content-col span-4">
+    <a href="#" class="prev-page-link">Previo</a>
+    <a href="#" class="next-page-link">Siguiente</a>
+  </div>
+</div>
+
+
+        </div>
+
+      </div>
+
+      <div id="page-footer" itemscope itemtype="http://schema.org/WPFooter">
+
+        <p id="copyright">Exepto aclaración en contrario, este contenido está bajo licencia <a href="../../creativecommons.org/licenses/by/2.5/default.htm"> Creative Commons Attribution 2.5</a>.<br>
+Para detalles y restricciones ver <a href="../license.html"> Licencia del Contenido</a>. </p>
+
+        <p> <a href="../../www.android.com/terms.html">Términos de Servicio del sitio</a> &ndash; <a href="../../www.android.com/privacy.html">Política de Privacidad</a> &ndash; <a href="../../www.android.com/branding.html">Directivas de Marca</a></p>
+      </div>
+  </div>
+
+    <!--ipt type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </scri-->
+    <!--ipt type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5831155-1");
+    pageTracker._trackPageview();
+    </scri-->
+  </body>
+</html>

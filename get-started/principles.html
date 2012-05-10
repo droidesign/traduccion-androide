@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+      Android Design - Design Principles
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../fonts.googleapis.com/css@family=Roboto_3Aregular,medium,thin,italic,mediumitalic">
+    <link rel="stylesheet" href="../../assets/yui-3.3.0-reset-min.css">
+    <link rel="stylesheet" href="../../assets/design/default.css">
+    <script src="../../assets/jquery-1.6.2.min.js"></script>
+    <script>var SITE_ROOT = '../../design';</script>
+    <script src="../../assets/design/default.js"></script>
+  </head>
+  <body itemscope itemtype="http://schema.org/Article">
+
+    <div id="page-container">
+
+      <div id="page-header" itemscope itemtype="http://schema.org/WPHeader"><a href="../index.html">Android Design</a></div>
+
+      <div id="main-row">
+
+        <div id="nav-container" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+        
+<ul id="nav">
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="index.html">cOMENZANDO</a></div>
+    <ul>
+      <li><a href="creative-vision.html">Vision Creativa</a></li>
+      <li><a href="principles.html">Principios de Diseño</a></li>
+      <li><a href="ui-overview.html">UI Revisión</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="style/index.html">EStILOS</a></div>
+    <ul>
+      <li><a href="style/devices-displays.html">Dispositivos/Pantallas</a></li>
+      <li><a href="style/themes.html">Temas</a></li>
+      <li><a href="style/touch-feedback.html">Feedback Táctil</a></li>
+      <li><a href="style/metrics-grids.html">Medidas y Grillas</a></li>
+      <li><a href="style/typography.html">Tipografias</a></li>
+      <li><a href="style/color.html">Colores</a></li>
+      <li><a href="style/iconography.html">Iconografia</a></li>
+      <li><a href="style/writing.html">Estilos de Escritura</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="patterns/index.html">PATRONES</a></div>
+    <ul>
+      <li><a href="patterns/new-4-0.html">Novedades Android 4</a></li>
+      <li><a href="patterns/gestures.html">Gestos</a></li>
+      <li><a href="patterns/app-structure.html">Estructura de Aplicación</a></li>
+      <li><a href="patterns/navigation.html">Navegación</a></li>
+      <li><a href="patterns/actionbar.html">Action Bar</a></li>
+      <li><a href="patterns/multi-pane-layouts.html">Maquetación Multi-pantallas</a></li>
+      <li><a href="patterns/swipe-views.html">Vistas Deslizantes</a></li>
+      <li><a href="patterns/selection.html">Seleccion</a>es</li>
+      <li><a href="patterns/notifications.html">Notificaciones</a></li>
+      <li><a href="patterns/settings.html">Ajustes</a></li>
+      <li><a href="patterns/compatibility.html">Compatibilidad</a></li>
+      <li><a href="patterns/pure-android.html">Android Puro</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="building-blocks/index.html">CONSTRUYENDO BloQUEs</a></div>
+    <ul>
+      <li><a href="building-blocks/tabs.html">Tabs</a></li>
+      <li><a href="building-blocks/lists.html">Listas</a></li>
+      <li><a href="building-blocks/grid-lists.html">Lista</a>  Grilla</li>
+      <li><a href="building-blocks/scrolling.html">Desplazamiento</a></li>
+      <li><a href="building-blocks/spinners.html">Cuadros de Selección</a></li>
+      <li><a href="building-blocks/buttons.html">Botones</a></li>
+      <li><a href="building-blocks/text-fields.html">Campos de Texto</a></li>
+      <li> Barrra de Opciones</li>
+      <li><a href="building-blocks/progress.html">Progreso &amp; Actividad</a></li>
+      <li><a href="building-blocks/switches.html">Interruptores</a></li>
+      <li><a href="building-blocks/dialogs.html">Dialogos</a></li>
+      <li><a href="building-blocks/pickers.html">Selectores</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header empty"><a href="downloads/index.html">DESCARGAS</a></div>
+  </li>
+
+  <li>
+    <div id="back-dac-section"><a href="../index.html">DESARROLLADORES</a></div>
+  </li>
+</ul>
+
+        </div>
+
+        <div id="content">
+
+
+<div class="layout-content-row content-header ">
+  <div class="layout-content-col span-9">
+    <h2>Principios de Diseño</h2>
+    
+  </div>
+  <span id="result_box" lang="es">Estos principios de diseño fueron desarrollados por y para el equipo de experiencia del usuario de Android para mantener en mente los mejores intereses del usuario.</span> Considerelos para aplicar sus propios creatividad e ideas de diseño. Solo desvíese por algún fin concreto.</div>
+
+
+<h2 id="enchant-me">Encántame</h2>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="delight-me">Deleítame de modo sorpresivo</h4>
+<p><span id="result_box2" lang="es">
+Una superficie hermosa, una animación cuidadosamente colocada, o un efecto de sonido  oportuno es un plus a la experiencia. Efectos sutiles contribuyen a una sensación de simplicidad y de que tenemos  una fuerza poderosa a mano.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_delight.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="real-objects-more-fun"><span id="result_box4" lang="es">Los objetos reales son más divertidos que los botones y menús</span></h4>
+<p><span id="result_box5" lang="es">Permita que la gente directamente tocar y manipular objetos en su aplicación. Reduce el esfuerzo cognitivo necesario para realizar una tarea, a la vez que lo hace emocionalmente más satisfactorio.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_real_objects.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="make-it-mine">Déjame hacerlo mío</h4>
+<p><span id="result_box3" lang="es">A la gente le encanta añadir toques personales, ya que les ayuda a sentirse como en casa y en control. Proporcióneles parámetros por defecto, pero también tenga en cuenta las posibles personalizaciones divertidas y opcionales que no sean contrarias a las tareas primarias.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_make_it_mine.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="get-to-know-me">Conózcame</h4>
+<p><span id="result_box6" lang="es">Aprenda las preferencias de la gente con el tiempo. En lugar de pedirles que tomar las mismas decisiones una y otra vez, coloque las opciones anteriores a su alcance.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_get_to_know_me.png">
+
+  </div>
+</div>
+
+<h2 id="simplify-my-life">Simplifica Mi Vida</h2>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="keep-it-brief">Sea breve</h4>
+<p><span id="result_box7" lang="es">Use frases cortas con palabras sencillas. La gente es probable que saltee las frases si son  largas.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_keep_it_brief.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="pictures-faster-than-words">Las imagenes son más rápidas que las palabras</h4>
+<p><span id="result_box9" lang="es">Considere el uso de imágenes para explicar ideas. Reciben más atención de la gente y puede ser mucho más eficiente que las palabras.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_pictures.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="decide-for-me">Decide por mí, pero dejame tener la última palabra</h4>
+<p><span id="result_box10" lang="es">Tome su mejor elección y actúe en lugar de preguntar primero. A la gente no le gustan tener demasiadas opciones y decisiones. Sólo en caso de no ser correcto, permitale "deshacer" o cambiar.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_decide_for_me.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="only-show-when-i-need-it">Solo muéstrame lo que necesito, cuando lo necesito</h4>
+<p><span id="result_box13" lang="es">La gente suele confundirse cuando ve demasiado a la vez. Divida las tareas y la información en bloques pequeños y digeribles. Oculte las opciones que no son esenciales en este momento, y enseñe a la gente a medida que avanza.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_information_when_need_it.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="always-know-where-i-am">Siempre debo saber donde estoy</h4>
+<p><span id="result_box22" lang="es">Dé confianza a la gente, que sepan donde se encuentran. Haga lugares en su aplicación luzcan distinto y utilice las transiciones para mostrar las relaciones entre pantallas. Proporcionar información sobre las tareas en curso.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_navigation.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="never-lose-my-stuff">Nunca pierda mis cosas</h4>
+<p><span id="result_box8" lang="es">Guarde lo que la gente se tomó el tiempo para crear y deje que accedan a él desde cualquier lugar. Recordar la configuración, toques personales, y las creaciones a través de teléfonos, tabletas y ordenadores. Esto hace de las actualizaciones  la cosa más fácil del mundo.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_never_lose_stuff.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="looks-same-should-act-same">Si se ve igual, que actúe de la misma forma</h4>
+<p>
+  Ayda a la gente a notar diferencias funcionales haciendolos visualmente distintos y no de manera sutil.  Evita zonas que luzcan similares y actuen disinto ante el mismo modo de seleccionarlos.</p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_looks_same.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="interrupt-only-if-important"><span id="result_box12" lang="es">Sólo interrúmpeme si es importante</span></h4>
+<p><span id="result_box11" lang="es">Al igual que un buen asistente personal, proteja a las personas de pequeños detalles sin importancia. La gente quiere mantener la concentración, y a menos que sea crítico y urgente, una interrupción puede ser agotadora y frustrante.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_important_interruption.png">
+
+  </div>
+</div>
+
+<h2 id="make-me-amazing">Hazmelo ver IIncreible</h2>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="give-me-tricks"><span id="result_box16" lang="es">Dame trucos que funcionan en todas partes</span></h4>
+<p><span id="result_box15" lang="es">Las personas se sienten grandes cuando resuelven las cosas por sí mismos. Haga su aplicación más fácil de aprender mediante el aprovechamiento de patrones visuales y la memoria ocular de otras aplicaciones Android. Por ejemplo, el gesto de deslizar puede ser un atajo de navegación buena.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_tricks.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="its-not-my-fault">No es mi culpa</h4>
+<p><span id="result_box14" lang="es">Sea amable en la forma de pedir que la gente haga las correcciones. Ellos quieren sentirse inteligentes cuando utilizan su aplicación. Si algo va mal, de instrucciones claras de recuperación, pero ahorreles los detalles técnicos. Si se puede arreglar en segundo plano, incluso mejor.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_error.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="sprinkle-encouragement">Acompañe e informe</h4>
+<p><span id="result_box17" lang="es">Divida las tareas complejas en pasos más pequeños que pueden llevarse a cabo fácilmente. De información sobre las acciones, incluso si es sólo una diferencia sutil.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_sprinkle_encouragement.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="do-heavy-lifting-for-me"><span id="result_box19" lang="es">Haz el trabajo pesado por mí</span></h4>
+<p><span id="result_box18" lang="es">Haga los novatos se sientan como expertos permitiéndoles hacer cosas que nunca pensaron que podían. Por ejemplo, los accesos directos que  combinan múltiples efectos de fotos pueden hacer que fotografías de aficionados se vean asombrosas en tan sólo unos pocos pasos.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_heavy_lifting.png">
+
+  </div>
+</div>
+
+<div class="vspace size-2">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+<h4 id="make-important-things-fast"><span id="result_box21" lang="es">Haz las cosas importantes rápido</span></h4>
+<p><span id="result_box20" lang="es">No todas las acciones son iguales. Decide qué es lo más importante en tu aplicación y que sea fácil de encontrar y rápido de usar, como el botón del obturador de una cámara, o el botón de pausa en el reproductor de música.</span></p>
+
+  </div>
+  <div class="layout-content-col span-6">
+
+    <img src="../media/principles_make_important_fast.png">
+
+  </div>
+</div>
+
+
+
+<div class="layout-content-row content-footer" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div class="paging-links layout-content-col span-9">&nbsp;</div>
+  <div class="paging-links layout-content-col span-4">
+    <a href="#" class="prev-page-link">Previo</a>
+    <a href="#" class="next-page-link">Próximo</a>
+  </div>
+</div>
+
+
+        </div>
+
+      </div>
+
+      <div id="page-footer" itemscope itemtype="http://schema.org/WPFooter">
+
+        <p id="copyright">Exepto aclaración en contrario, este contenido está bajo licencia <a href="../../creativecommons.org/licenses/by/2.5/default.htm"> Creative Commons Attribution 2.5</a>.<br>
+Para detalles y restricciones ver <a href="../license.html"> Licencia del Contenido</a>. </p>
+
+        <p> <a href="../../www.android.com/terms.html">Términos de Servicio del sitio</a> &ndash; <a href="../../www.android.com/privacy.html">Política de Privacidad</a> &ndash; <a href="../../www.android.com/branding.html">Directivas de Marca</a></p>
+      </div>
+  </div>
+
+    <!--ipt type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </scri-->
+    <!--ipt type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5831155-1");
+    pageTracker._trackPageview();
+    </scri-->
+  </body>
+</html>

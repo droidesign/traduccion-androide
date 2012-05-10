@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+      Android Design - UI Overview
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../fonts.googleapis.com/css@family=Roboto_3Aregular,medium,thin,italic,mediumitalic">
+    <link rel="stylesheet" href="../../assets/yui-3.3.0-reset-min.css">
+    <link rel="stylesheet" href="../../assets/design/default.css">
+    <script src="../../assets/jquery-1.6.2.min.js"></script>
+    <script>var SITE_ROOT = '../../design';</script>
+    <script src="../../assets/design/default.js"></script>
+  </head>
+  <body itemscope itemtype="http://schema.org/Article">
+
+    <div id="page-container">
+
+      <div id="page-header" itemscope itemtype="http://schema.org/WPHeader"><a href="../index.html">Android Design</a></div>
+
+      <div id="main-row">
+
+        <div id="nav-container" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+        
+<ul id="nav">
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="index.html">cOMENZANDO</a></div>
+    <ul>
+      <li><a href="creative-vision.html">Vision Creativa</a></li>
+      <li><a href="principles.html">Principios de Diseño</a></li>
+      <li><a href="ui-overview.html">UI Revisión</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="style/index.html">EStILOS</a></div>
+    <ul>
+      <li><a href="style/devices-displays.html">Dispositivos/Pantallas</a></li>
+      <li><a href="style/themes.html">Temas</a></li>
+      <li><a href="style/touch-feedback.html">Feedback Táctil</a></li>
+      <li><a href="style/metrics-grids.html">Medidas y Grillas</a></li>
+      <li><a href="style/typography.html">Tipografias</a></li>
+      <li><a href="style/color.html">Colores</a></li>
+      <li><a href="style/iconography.html">Iconografia</a></li>
+      <li><a href="style/writing.html">Estilos de Escritura</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="patterns/index.html">PATRONES</a></div>
+    <ul>
+      <li><a href="patterns/new-4-0.html">Novedades Android 4</a></li>
+      <li><a href="patterns/gestures.html">Gestos</a></li>
+      <li><a href="patterns/app-structure.html">Estructura de Aplicación</a></li>
+      <li><a href="patterns/navigation.html">Navegación</a></li>
+      <li><a href="patterns/actionbar.html">Action Bar</a></li>
+      <li><a href="patterns/multi-pane-layouts.html">Maquetación Multi-pantallas</a></li>
+      <li><a href="patterns/swipe-views.html">Vistas Deslizantes</a></li>
+      <li><a href="patterns/selection.html">Seleccion</a>es</li>
+      <li><a href="patterns/notifications.html">Notificaciones</a></li>
+      <li><a href="patterns/settings.html">Ajustes</a></li>
+      <li><a href="patterns/compatibility.html">Compatibilidad</a></li>
+      <li><a href="patterns/pure-android.html">Android Puro</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="building-blocks/index.html">CONSTRUYENDO BloQUEs</a></div>
+    <ul>
+      <li><a href="building-blocks/tabs.html">Tabs</a></li>
+      <li><a href="building-blocks/lists.html">Listas</a></li>
+      <li><a href="building-blocks/grid-lists.html">Lista</a>  Grilla</li>
+      <li><a href="building-blocks/scrolling.html">Desplazamiento</a></li>
+      <li><a href="building-blocks/spinners.html">Cuadros de Selección</a></li>
+      <li><a href="building-blocks/buttons.html">Botones</a></li>
+      <li><a href="building-blocks/text-fields.html">Campos de Texto</a></li>
+      <li> Barrra de Opciones</li>
+      <li><a href="building-blocks/progress.html">Progreso &amp; Actividad</a></li>
+      <li><a href="building-blocks/switches.html">Interruptores</a></li>
+      <li><a href="building-blocks/dialogs.html">Dialogos</a></li>
+      <li><a href="building-blocks/pickers.html">Selectores</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header empty"><a href="downloads/index.html">DESCARGAS</a></div>
+  </li>
+
+  <li>
+    <div id="back-dac-section"><a href="../index.html">DESARROLLADORES</a></div>
+  </li>
+</ul>
+
+
+        </div>
+
+        <div id="content">
+
+
+<div class="layout-content-row content-header ">
+  <div class="layout-content-col span-9">
+    <h2>UI Revisión</h2>
+    
+  </div>
+  <div class="paging-links layout-content-col span-4" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <a href="#" class="prev-page-link">Previous</a>
+    <a href="#" class="next-page-link">Next</a>
+  </div>
+</div>
+
+
+<p><span id="result_box" lang="es">La interfaz de usuario del Sistema Android proporciona el marco sobre el cual construir su aplicación. Los aspectos importantes incluyen la experiencia de la pantalla principal, dispositivo de navegación global, y las notificaciones.<br>
+    <br>
+Su aplicación va a desempeñar un papel importante en mantener la experiencia de Android en general coherente y agradable de usar. Al final de este capítulo presentamos los elementos principales para alcanzar este objetivo en su aplicación.<br>
+<br>
+Siga leyendo para obtener una rápida visión general de los aspectos más importantes de la interfaz de usuario de Android.</span></p>
+<h2 id="home-all-apps-recents"><span id="result_box2" lang="es">Pantalla Inicio, Pantalla Todas las Apps, y Pantalla Apps reciente</span>s</h2>
+
+<div class="vspace size-1">&nbsp;</div>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-4">
+
+    <img src="../media/ui_overview_home_screen.png">
+
+<h4>Pantalla de inicio</h4>
+<p><span id="result_box3" lang="es">La pantalla de inicio es un espacio personalizable que contiene accesos directos de aplicaciones, carpetas y widgets. Navegue entre diferentes paneles de la pantalla de inicio al deslizar a izquierda y derecha.<br>
+    <br>
+La bandeja de favoritos en la parte inferior siempre mantiene sus accesos directos y carpetas más importantes a la vistaindependientemente del panel que se muestra actualmente.<br>
+<br>
+Acceda a toda la colección de aplicaciones y widgetstocando el botón de Todas las aplicaciones en el centro de la bandeja de mis favoritos.</span></p>
+</div>
+  <div class="layout-content-col span-4">
+
+    <img src="../media/ui_overview_all_apps.png">
+
+<h4>Pantalla Todas las Aplicaciones</h4>
+<p><span id="result_box4" lang="es">La pantalla de Todas las aplicaciones le permite navegar por todo el conjunto de aplicaciones y widgets que están instalados en su dispositivo.<br>
+    <br>
+Los usuarios pueden arrastrar un icono de la aplicación o widget en la pantalla de Todas las aplicaciones y colocarlo en cualquier lugar vacío de cualquier pantalla de inicio.</span></p>
+</div>
+  <div class="layout-content-col span-4">
+
+    <img src="../media/ui_overview_recents.png">
+
+<h4>Pantalla  Recientes</h4>
+<p><span id="result_box5" lang="es">La Pantalla Recientes proporciona una forma eficaz de cambiar entre las aplicaciones utilizadas recientemente. Proporciona una ruta de navegación clara entre múltiples tareas en curso.<br>
+    <br>
+El botón Recientes en el lado derecho de la barra de navegación muestra las aplicaciones con que el usuario ha interactuado más recientemente. Ellas están organizadas en orden cronológico inverso, con la aplicación utilizada más recientemente en la parte inferior.<br>
+<br>
+Cambie a una aplicación con sólo tocarlo. Quite un elemento al deslizar a izquierda o derecha.</span></p>
+</div>
+</div>
+
+<h2 id="system-bars"> Barras del Sistema</h2>
+
+<p><span id="result_box6" lang="es">Las barras de sistema son las áreas de pantalla dedicados a la visualización de notificaciones, la comunicación del estado del dispositivo, y el dispositivo de navegación. Normalmente, las barras del sistema se muestran simultáneamente con su aplicación. Las aplicaciones que muestren contenido envolvente, como películas o imágenes, puede ocultar temporalmente las barras del sistema para permitir al usuario disfrutar de contenido en pantalla completa sin distracciones.</span></p>
+
+<img src="../media/ui_overview_system_ui.png">
+
+<div class="with-callouts">
+
+<ol>
+<li>
+<h4>Barra de Estado</h4>
+<p><span id="result_box12" lang="es">Muestra las notificaciones pendientes en la izquierda y los estados, como la hora, nivel de batería, o intensidad de la señal, a la derecha. Deslice hacia abajo la barra de estado para mostrar los detalles de notificación.</span></p>
+</li>
+<li>
+<h4>Barra de Navegación</h4>
+<p><span id="result_box13" lang="es">Nueva en los teléfonos con Android 4.0, la barra de navegación está presente sólo en los dispositivos que no cuentan con las teclas de hardware tradicionales. Alberga el dispositivo de navegación de controles: Volver, la Pantalla de inicio y la Pantalla Recientes, y también muestra un menú para las aplicaciones escritas para Android 2.3 o versiones anteriores.</span></p>
+</li>
+<li>
+<h4>Barra Combinada</h4>
+<p><span id="result_box14" lang="es">En las Tablets   las barras de estado y de navegación se combinan en una sola barra en la parte inferior de la pantalla.</span></p>
+</li>
+</ol>
+
+</div>
+
+<h2 id="notifications">Notificationes</h2>
+
+<p><span id="result_box15" lang="es">Las notificaciones son mensajes breves que los usuarios pueden acceder en cualquier momento desde la barra de estado. Proporcionan actualizaciones, recordatorios, o informaciones que es importante, pero no lo suficientemente crítica para justificar la interrupción del usuario. Abra la bandeja de notificaciones al deslizar hacia abajo en la barra de estado. Si toca una notificación abrirá la aplicación asociada.</span><a href="../patterns/notifications.html">Más sobre Notificaciones</a></p>
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-4">
+
+    <img src="../media/ui_overview_notifications.png">
+
+  </div>
+  <div class="layout-content-col span-9">
+
+    <img src="../media/notifications_dismiss.png">
+
+<p><span id="result_box16" lang="es">La mayoría de de notificaciones tienen un título de una línea y un mensaje de una línea. La distribución recomendada para una notificación incluye dos líneas. Si es necesario, puede agregar una tercera línea. Las marcas de tiempo son opcionales.<br>
+    <br>
+Al deslizar una notificación a derecha o izquierda ésta se quita de la bandeja de notificaciónes.</span></p>
+</div>
+</div>
+
+
+<h2 id="app">Aplicaciones Comunes UI</h2>
+
+
+<div class="layout-content-row">
+  <div class="layout-content-col span-7">
+
+    <img src="../media/ui_overview_app_ui.png">
+
+  </div>
+  <div class="layout-content-col span-6 with-callouts">
+
+<p><span id="result_box17" lang="es">Una típica aplicación Android se compone de barras de acción y el área de contenido de aplicación.</span></p>
+<ol>
+<li>
+<h4><span id="result_box7" lang="es">Barra de acción principal</span></h4>
+<p><span id="result_box8" lang="es">El centro de mando y control para su aplicación. La barra de acción incluye los elementos principales para navegar por la jerarquía de su aplicación y puntos de vista, y también las superficies de las acciones más importantes.</span><a href="../patterns/actionbar.html">Más información sobre la Barra de acciones</a></p>
+</li>
+<li>
+<h4>Control de Vista</h4>
+<p><span id="result_box9" lang="es">Permite a los usuarios cambiar entre los diferentes puntos de vista que su aplicación proporciona. Las vistas típicamente consisten de diversos arreglos de sus datos o diferentes aspectos funcionales de su aplicación.</span></p>
+</li>
+<li>
+<h4>Área del Contenido</h4>
+<p><span id="result_box10" lang="es">El espacio en el que el contenido de su aplicación en la pantalla.</span></p>
+</li>
+<li>
+<h4>Barra de Acción Dividida</h4>
+<p><span id="result_box11" lang="es">Barras de acción Divididas proporcionan una manera de distribuir acciones a través de barras adicionales situadas por debajo de la barra de acción principal o en la parte inferior de la pantalla. En este ejemplo, una barra de acción de división se mueve acciones importantes que no caben en la barra principal al fondo.</span></p>
+</li>
+</ol>
+
+  </div>
+</div>
+
+
+
+<div class="layout-content-row content-footer" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div class="paging-links layout-content-col span-9">&nbsp;</div>
+  <div class="paging-links layout-content-col span-4">
+    <a href="#" class="prev-page-link">Previous</a>
+    <a href="#" class="next-page-link">Next</a>
+  </div>
+</div>
+
+
+        </div>
+
+      </div>
+
+      <div id="page-footer" itemscope itemtype="http://schema.org/WPFooter">
+
+        <p id="copyright">Exepto aclaración en contrario, este contenido está bajo licencia <a href="../../creativecommons.org/licenses/by/2.5/default.htm"> Creative Commons Attribution 2.5</a>.<br>
+Para detalles y restricciones ver <a href="../license.html"> Licencia del Contenido</a>. </p>
+
+        <p> <a href="../../www.android.com/terms.html">Términos de Servicio del sitio</a> &ndash; <a href="../../www.android.com/privacy.html">Política de Privacidad</a> &ndash; <a href="../../www.android.com/branding.html">Directivas de Marca</a></p>
+      </div>
+  </div>
+
+    <!--ipt type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </scri-->
+    <!--ipt type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5831155-1");
+    pageTracker._trackPageview();
+    </scri-->
+  </body>
+</html>

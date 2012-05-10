@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+      Android Design - Buttons
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../../fonts.googleapis.com/css@family=Roboto_3Aregular,medium,thin,italic,mediumitalic">
+    <link rel="stylesheet" href="../../assets/yui-3.3.0-reset-min.css">
+    <link rel="stylesheet" href="../../assets/design/default.css">
+    <script src="../../assets/jquery-1.6.2.min.js"></script>
+    <script>var SITE_ROOT = '../../design';</script>
+    <script src="../../assets/design/default.js"></script>
+  </head>
+  <body itemscope itemtype="http://schema.org/Article">
+
+    <div id="page-container">
+
+      <div id="page-header" itemscope itemtype="http://schema.org/WPHeader"><a href="../index.html">Android Design</a></div>
+
+      <div id="main-row">
+
+        <div id="nav-container" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+        
+<ul id="nav">
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="index.html">cOMENZANDO</a></div>
+    <ul>
+      <li><a href="creative-vision.html">Vision Creativa</a></li>
+      <li><a href="principles.html">Principios de Diseño</a></li>
+      <li><a href="ui-overview.html">UI Revisión</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="style/index.html">EStILOS</a></div>
+    <ul>
+      <li><a href="style/devices-displays.html">Dispositivos/Pantallas</a></li>
+      <li><a href="style/themes.html">Temas</a></li>
+      <li><a href="style/touch-feedback.html">Feedback Táctil</a></li>
+      <li><a href="style/metrics-grids.html">Medidas y Grillas</a></li>
+      <li><a href="style/typography.html">Tipografias</a></li>
+      <li><a href="style/color.html">Colores</a></li>
+      <li><a href="style/iconography.html">Iconografia</a></li>
+      <li><a href="style/writing.html">Estilos de Escritura</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="patterns/index.html">PATRONES</a></div>
+    <ul>
+      <li><a href="patterns/new-4-0.html">Novedades Android 4</a></li>
+      <li><a href="patterns/gestures.html">Gestos</a></li>
+      <li><a href="patterns/app-structure.html">Estructura de Aplicación</a></li>
+      <li><a href="patterns/navigation.html">Navegación</a></li>
+      <li><a href="patterns/actionbar.html">Action Bar</a></li>
+      <li><a href="patterns/multi-pane-layouts.html">Maquetación Multi-pantallas</a></li>
+      <li><a href="patterns/swipe-views.html">Vistas Deslizantes</a></li>
+      <li><a href="patterns/selection.html">Seleccion</a>es</li>
+      <li><a href="patterns/notifications.html">Notificaciones</a></li>
+      <li><a href="patterns/settings.html">Ajustes</a></li>
+      <li><a href="patterns/compatibility.html">Compatibilidad</a></li>
+      <li><a href="patterns/pure-android.html">Android Puro</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header"><a href="building-blocks/index.html">CONSTRUYENDO BloQUEs</a></div>
+    <ul>
+      <li><a href="building-blocks/tabs.html">Tabs</a></li>
+      <li><a href="building-blocks/lists.html">Listas</a></li>
+      <li><a href="building-blocks/grid-lists.html">Lista</a>  Grilla</li>
+      <li><a href="building-blocks/scrolling.html">Desplazamiento</a></li>
+      <li><a href="building-blocks/spinners.html">Cuadros de Selección</a></li>
+      <li><a href="building-blocks/buttons.html">Botones</a></li>
+      <li><a href="building-blocks/text-fields.html">Campos de Texto</a></li>
+      <li> Barrra de Opciones</li>
+      <li><a href="building-blocks/progress.html">Progreso &amp; Actividad</a></li>
+      <li><a href="building-blocks/switches.html">Interruptores</a></li>
+      <li><a href="building-blocks/dialogs.html">Dialogos</a></li>
+      <li><a href="building-blocks/pickers.html">Selectores</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-section">
+    <div class="nav-section-header empty"><a href="downloads/index.html">DESCARGAS</a></div>
+  </li>
+
+  <li>
+    <div id="back-dac-section"><a href="../index.html">DESARROLLADORES</a></div>
+  </li>
+</ul>
+
+
+        </div>
+
+        <div id="content">
+
+
+<div class="layout-content-row content-header ">
+  <div class="layout-content-col span-9">
+    <h2>Botones</h2>
+    
+  </div>
+  <div class="paging-links layout-content-col span-4" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <a href="#" class="prev-page-link">Previous</a>
+    <a href="#" class="next-page-link">Next</a>
+  </div>
+</div>
+
+
+<p><span id="result_box" lang="es">Un botón se compone de texto y / o una imagen que muestra claramente que acción se produce cuando el usuario lo Android es compatible con dos tipos diferentes de botones: Los botones y los botones básicos sin bordes. Ambos pueden contener las etiquetas de texto y / o imágenes.</span></p>
+
+<div style="text-align: center">
+  <img src="../media/buttons_basic.png">
+</div>
+
+<h2 id="basic">Botones Básicos</h2>
+
+<p><span id="result_box2" lang="es">Botones básicosson los botones tradicionales con bordes y fondo. Android es compatible con dos estilos de botones básicos: por defecto y pequeños. Los botones por defecto tienen un tamaño ligeramente más grande de la fuente y se han optimizado para su visualización fuera de el contenido del formulario. Los Botones pequeños están destinados para la exhibición junto a otros contenidos. Ellos tienen una fuente más pequeña y menor altura. Utilice los botones pequeños en formularios donde son necesarios para alinearse con otros elementos de la IU.</span></p>
+
+<img src="../media/buttons_default_small.png">
+<div class="layout-content-row">
+  <div class="layout-content-col span-6">
+    <div class="figure-caption">
+      Botones Comunes en Holo Dark &amp; Light.
+    </div>
+  </div>
+  <div class="layout-content-col span-6">
+    <div class="figure-caption">
+      Botones Pequeños en Holo Dark &amp; Light.
+    </div>
+  </div>
+</div>
+
+<h2 id="borderless">Botones Sin Bordes</h2>
+
+<p><span id="result_box3" lang="es">Los botones sin bordes se asemejan a botones básicos, excepto que no tienen bordes o fondo. Puede usar los botones sin bordes con iconos y texto. Los botones sin bordes son visualmente más livianos que los botones básicos y se integran muy bien con otros contenidos.</span></p>
+
+<img src="../media/buttons_borderless.png">
+
+
+
+<div class="layout-content-row content-footer" itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <div class="paging-links layout-content-col span-9">&nbsp;</div>
+  <div class="paging-links layout-content-col span-4">
+    <a href="#" class="prev-page-link">Previo</a>
+    <a href="#" class="next-page-link">Próximo</a>
+  </div>
+</div>
+
+
+        </div>
+
+      </div>
+
+      <div id="page-footer" itemscope itemtype="http://schema.org/WPFooter">
+
+        <p id="copyright">Exepto aclaración en contrario, este contenido está bajo licencia <a href="../../creativecommons.org/licenses/by/2.5/default.htm"> Creative Commons Attribution 2.5</a>.<br>
+Para detalles y restricciones ver <a href="../license.html"> Licencia del Contenido</a>. </p>
+
+        <p> <a href="../../www.android.com/terms.html">Términos de Servicio del sitio</a> &ndash; <a href="../../www.android.com/privacy.html">Política de Privacidad</a> &ndash; <a href="../../www.android.com/branding.html">Directivas de Marca</a></p>
+      </div>
+  </div>
+
+    <!--ipt type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </scri-->
+    <!--ipt type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-5831155-1");
+    pageTracker._trackPageview();
+    </scri-->
+  </body>
+</html>
